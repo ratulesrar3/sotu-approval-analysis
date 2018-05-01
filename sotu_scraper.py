@@ -22,22 +22,20 @@ def get_soup(url):
     return soup
 
 
-def scrape_committees(url):
-    '''
-    Returns list of urls to committee pages
-    '''
-    url_dict = {
-        'committee_name':[],
-        'committee_id':[],
-        'committee_url':[]
-    }
-    soup = get_soup(url)        
-    for table in soup.find_all('div', {'class': 'module'}):
-        for tag in table.find_all('a', {'class': 'module-title'}):
-            l = tag['href'].split('/')
-            committee_id = l[4]
-            full_link = url+l[4]+'/documents/'
-            url_dict['committee_name'].append(tag.text)
-            url_dict['committee_id'].append(committee_id)
-            url_dict['committee_url'].append(full_link)
-    return pd.DataFrame(url_dict)
+def get_transcript_links(url):
+	'''
+	Given a page, return data structue of years and corresponding link to address
+	'''
+	url_dict = {
+		'year':[],
+		'url':[]
+	}
+	soup = get_soup(url)
+	for td in soup.find_all('td', {'align':'center', 'class':'ver12'}):
+		for a in td.find_all('a', href=True):
+			if len(a.text) == 4:
+				if int(a.text) > 1936:
+					url_dict['year'].append(a.text)
+					url_dict['url'].append(a['href'])
+
+	return pd.DataFrame(url_dict).sort_values(by='year', ascending=False)
