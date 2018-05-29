@@ -9,6 +9,7 @@ The high-level goal of this project is to apply text analysis techniques, includ
 UCSB’s [The American Presidency Project](http://www.presidency.ucsb.edu/sou.php)
 - Corpus built by scraping State of the Union transcripts
 - Output stored as .txt file for each address, including both written and spoken addresses
+
 Roper Center for Public Opinion Research [Presidential Approval Project](https://presidential.roper.center/)
 - Database of public presidential polls starting from 1942 
 
@@ -31,6 +32,8 @@ Roper Center for Public Opinion Research [Presidential Approval Project](https:/
     ├── bigram_analysis.ipynb     # Notebook for text bigram analysis
     │  
     ├── topic_modeling.ipynb      # Notebook for text topic modeling using LDA, making word clouds
+    │
+    ├── tmpp-presentation.pdf     # Project presenation, (5/29/18)
     │  
     └── README.md
 
