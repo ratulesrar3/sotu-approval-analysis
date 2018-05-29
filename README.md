@@ -44,7 +44,7 @@ Roper Center for Public Opinion Research [Presidential Approval Project](https:/
 4. Frank Evan, [Topic Modeling of the State of the Union Address](https://dzone.com/articles/topic-modeling-the-state-of-the-union-address-with)
 5. FiveThirtyEight,  [Presidential approval poll aggregator](https://projects.fivethirtyeight.com/trump-approval-ratings/?ex_cid=rrpromo)
 6. UCSB, [The American Presidency Project](http://www.presidency.ucsb.edu/sou.php)
-7. Roper Center for Public Opinion Research [Presidential Approval Project](https://presidential.roper.center/)
+7. Roper Center for Public Opinion Research, [Presidential Approval Project](https://presidential.roper.center/)
 
 
 
